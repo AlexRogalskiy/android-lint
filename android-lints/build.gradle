@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.kozaxinan.android-lints'
+
+android {
+  compileSdkVersion 30
+
+  defaultConfig {
+    minSdkVersion 14
+  }
+
+  buildFeatures {
+    buildConfig = false
+  }
+}
+
+dependencies {
+  lintPublish project(':checks')
+}
